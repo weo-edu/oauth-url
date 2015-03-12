@@ -4,7 +4,8 @@ module.exports = function(base, opts) {
     scope: buildScopes(opts.scopes, opts.scopePrefix, opts.scopeDelimiter),
     client_id: opts.clientId,
     redirect_uri: opts.redirectUri || window.location.origin,
-    response_type: opts.responseType || 'code'
+    response_type: opts.responseType || 'code',
+    display: opts.display || 'popup'
   });
 };
 
