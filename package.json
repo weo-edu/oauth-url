@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/weo-edu/oauth-url/issues"
   },
-  "homepage": "https://github.com/weo-edu/oauth-url"
+  "homepage": "https://github.com/weo-edu/oauth-url",
+  "devDependencies": {
+    "mocha": "^2.2.1"
+  }
 }
