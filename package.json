@@ -1,0 +1,26 @@
+{
+  "name": "oauth-url",
+  "version": "0.1.0",
+  "description": "Generate an oauth url",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/weo-edu/oauth-url"
+  },
+  "keywords": [
+    "oauth",
+    "url"
+  ],
+  "author": "ashaffer (http://github.com/ashaffer)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/weo-edu/oauth-url/issues"
+  },
+  "homepage": "https://github.com/weo-edu/oauth-url"
+}
