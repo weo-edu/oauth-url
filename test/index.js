@@ -11,7 +11,7 @@ describe('oauth-url', function() {
     var googleUrl = oauthUrl('https://accounts.google.com/o/oauth2/auth', {
       scopePrefix: 'openid',
       scopeDelimiter: ' ',
-      scopes: ['profile', 'email'],
+      scope: ['profile', 'email'],
     });
 
     assert.equal(googleUrl, 'https://accounts.google.com/o/oauth2/auth?scope=openid%20profile%20email&client_id=undefined&redirect_uri=http%3A%2F%2Flocalhost&response_type=code');

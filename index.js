@@ -1,6 +1,6 @@
 module.exports = function oauthUrl(baseUrl, opts) {
   return baseUrl + '?' + qs({
-    scope: buildScopes(opts.scope, opts.scopePrefix, opts.scopeDelimiter),
+    scope: buildScope(opts.scope, opts.scopePrefix, opts.scopeDelimiter),
     client_id: opts.clientId,
     redirect_uri: opts.redirectUri || window.location.origin,
     response_type: opts.responseType || 'code',
@@ -15,8 +15,8 @@ function qs(params) {
   }).join('&');
 }
 
-function buildScopes(scopes, prefix, delimiter) {
-  var str = scopes.join(delimiter);
+function buildScope(scope, prefix, delimiter) {
+  var str = scope.join(delimiter);
   return prefix
     ? prefix + delimiter + str
     : str;
