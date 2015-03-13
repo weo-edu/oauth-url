@@ -4,7 +4,8 @@ module.exports = function oauthUrl(baseUrl, opts) {
     client_id: opts.clientId,
     redirect_uri: opts.redirectUri || window.location.origin,
     response_type: opts.responseType || 'code',
-    display: opts.display || 'popup'
+    display: opts.display || 'popup',
+    access_type: opts.accessType
   });
 }
 
