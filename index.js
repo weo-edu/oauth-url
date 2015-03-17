@@ -1,12 +1,17 @@
 module.exports = function oauthUrl(baseUrl, opts) {
-  return baseUrl + '?' + qs({
+  var params = {
     scope: buildScope(opts.scope, opts.scopePrefix, opts.scopeDelimiter),
     client_id: opts.clientId,
     redirect_uri: opts.redirectUri || window.location.origin,
     response_type: opts.responseType || 'code',
-    display: opts.display || 'popup',
-    access_type: opts.accessType
-  });
+    display: opts.display || 'popup'
+  };
+
+  if(opts.accessType)
+    params.access_type = opts.accessType;
+
+  var query = qs(params);
+  return [baseUrl, query].join('?');
 }
 
 function qs(params) {
