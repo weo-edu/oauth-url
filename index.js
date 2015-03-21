@@ -1,4 +1,5 @@
-module.exports = function oauthUrl(baseUrl, opts) {
+module.exports = function oauthUrl(opts) {
+  var baseUrl = opts.baseUrl;
   var params = {
     scope: buildScope(opts.scope, opts.scopePrefix, opts.scopeDelimiter),
     client_id: opts.clientId,
