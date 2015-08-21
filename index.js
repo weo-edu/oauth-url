@@ -6,6 +6,9 @@ module.exports = function oauthUrl(opts) {
     display: opts.display || 'popup'
   }
   
+  if (opts.oauth_token) {
+    params.oauth_token = opts.oauth_token
+  }
   if (opts.clientId) {
     params.client_id = opts.clientId
   }
