@@ -1,22 +1,22 @@
 module.exports = function oauthUrl(opts) {
   var baseUrl = opts.baseUrl
-  var params = {
-    redirect_uri: opts.redirectUri || window.location.origin,
-    response_type: opts.responseType || 'code',
-    display: opts.display || 'popup'
-  }
-  
+  var params = opts.params || {}
+
+  params.redirect_uri = opts.redirectUri || window.location.origin
+  params.response_type = opts.responseType || 'code',
+  params.display = opts.display || 'popup'
+
   if (opts.oauth_token) {
     params.oauth_token = opts.oauth_token
   }
   if (opts.clientId) {
     params.client_id = opts.clientId
   }
-  
+
   if(opts.scope) {
     params.scope = buildScope(opts.scope, opts.scopePrefix, opts.scopeDelimiter)
   }
-  
+
   if(opts.accessType)
     params.access_type = opts.accessType
 
